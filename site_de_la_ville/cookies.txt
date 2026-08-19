@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.cts-strasbourg.eu	TRUE	/	FALSE	1999999999	JSESSIONID_OCMS	0f4d76a5f9136052~8E1B09F9D6FC12E597CA118304F89B5F
+

@@ -1,0 +1,471 @@
+/* ============================================================
+   Ville de Hoenheim — Modernisation visuelle
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap');
+
+:root {
+  --hoenheim-blue-dark: #1a3560;
+  --hoenheim-blue: #2d5a9e;
+  --hoenheim-blue-light: #4a7fd4;
+  --hoenheim-green: #2bab61;
+  --hoenheim-green-dark: #1e8a4a;
+  --hoenheim-green-light: #e8f7ef;
+  --hoenheim-bg: #f0f4f8;
+  --hoenheim-surface: #ffffff;
+  --hoenheim-text: #1e293b;
+  --hoenheim-text-muted: #64748b;
+  --hoenheim-border: #e2e8f0;
+  --hoenheim-shadow: 0 4px 24px rgba(26, 53, 96, 0.08);
+  --hoenheim-shadow-lg: 0 12px 40px rgba(26, 53, 96, 0.12);
+  --hoenheim-radius: 12px;
+  --hoenheim-radius-sm: 8px;
+  --hoenheim-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Base & Typography ---- */
+
+body.custom-background {
+  background: linear-gradient(160deg, #e8eef5 0%, #f5f7fa 40%, #edf2f7 100%) !important;
+  background-attachment: fixed !important;
+}
+
+body,
+.site {
+  font-family: 'DM Sans', 'Segoe UI', system-ui, sans-serif !important;
+  color: var(--hoenheim-text) !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.entry-header .entry-title,
+.entry-header .entry-title a {
+  font-family: 'Fraunces', Georgia, serif !important;
+  color: var(--hoenheim-blue-dark) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 2rem !important; }
+h2 { font-size: 1.6rem !important; }
+h3 { font-size: 1.25rem !important; }
+
+.entry-header .entry-title {
+  margin-bottom: 0.5em !important;
+  padding-bottom: 0.4em;
+  border-bottom: 3px solid var(--hoenheim-green);
+  display: inline-block;
+}
+
+/* ---- Site Container ---- */
+
+.hfeed.site,
+.site {
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.site-content {
+  background: var(--hoenheim-surface) !important;
+  border-radius: var(--hoenheim-radius) !important;
+  box-shadow: var(--hoenheim-shadow) !important;
+  margin: 1.5rem auto !important;
+  padding: 2rem 2.5rem 3rem !important;
+  border: 1px solid var(--hoenheim-border) !important;
+}
+
+.content {
+  padding: 0 0 2rem !important;
+}
+
+/* ---- Header & Navigation ---- */
+
+.site-info-text-top,
+#top-1-navigation {
+  background: linear-gradient(135deg, var(--hoenheim-blue-dark) 0%, var(--hoenheim-blue) 100%) !important;
+  box-shadow: 0 2px 16px rgba(26, 53, 96, 0.25) !important;
+}
+
+#top-navigation {
+  background: linear-gradient(135deg, var(--hoenheim-blue) 0%, var(--hoenheim-blue-light) 100%) !important;
+  border-top: none !important;
+  box-shadow: 0 2px 8px rgba(26, 53, 96, 0.15) !important;
+}
+
+#top-1-navigation .horisontal-navigation li a,
+#top-navigation .horisontal-navigation li a {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  padding: 0.65rem 1rem !important;
+  border-radius: var(--hoenheim-radius-sm) !important;
+  transition: background var(--hoenheim-transition), color var(--hoenheim-transition), transform var(--hoenheim-transition) !important;
+  letter-spacing: 0.01em;
+}
+
+#top-1-navigation .horisontal-navigation li a:hover,
+#top-1-navigation .horisontal-navigation li a:focus,
+#top-navigation .horisontal-navigation li a:hover,
+#top-navigation .horisontal-navigation li a:focus {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+#top-1-navigation .horisontal-navigation li ul,
+#top-navigation .horisontal-navigation li ul {
+  background: var(--hoenheim-surface) !important;
+  border-radius: var(--hoenheim-radius-sm) !important;
+  box-shadow: var(--hoenheim-shadow-lg) !important;
+  border: 1px solid var(--hoenheim-border) !important;
+  overflow: hidden;
+  padding: 0.35rem 0 !important;
+}
+
+#top-1-navigation .horisontal-navigation li ul li a,
+#top-navigation .horisontal-navigation li ul li a {
+  color: var(--hoenheim-text) !important;
+  border-radius: 0 !important;
+}
+
+#top-1-navigation .horisontal-navigation li ul li a:hover,
+#top-navigation .horisontal-navigation li ul li a:hover {
+  background: var(--hoenheim-green-light) !important;
+  color: var(--hoenheim-green-dark) !important;
+}
+
+.horisontal-navigation .current-menu-item > a,
+.horisontal-navigation .current_page_item > a {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: none !important;
+  border-radius: var(--hoenheim-radius-sm) !important;
+  box-shadow: none !important;
+}
+
+.laDate {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.03em;
+  padding: 0.5rem 1rem;
+}
+
+.logo-section .logo {
+  border-radius: var(--hoenheim-radius-sm);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: transform var(--hoenheim-transition), box-shadow var(--hoenheim-transition);
+}
+
+.logo-section:hover .logo {
+  transform: scale(1.03);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+.header-wrapper {
+  overflow: visible !important;
+}
+
+/* ---- Links ---- */
+
+a,
+.content a,
+.column .widget a,
+.image-and-cats a {
+  color: var(--hoenheim-blue) !important;
+  text-decoration: none !important;
+  transition: color var(--hoenheim-transition) !important;
+}
+
+a:hover,
+.content a:hover,
+.column .widget a:hover {
+  color: var(--hoenheim-green) !important;
+}
+
+/* ---- Widgets & Sidebars ---- */
+
+.column .widget,
+.sidebar-left .widget,
+.sidebar-right .widget {
+  border: 1px solid var(--hoenheim-border) !important;
+  border-radius: var(--hoenheim-radius) !important;
+  overflow: hidden;
+  box-shadow: var(--hoenheim-shadow) !important;
+  background: var(--hoenheim-surface) !important;
+  margin-bottom: 1.5rem !important;
+  transition: box-shadow var(--hoenheim-transition), transform var(--hoenheim-transition) !important;
+}
+
+.column .widget:hover,
+.sidebar-left .widget:hover,
+.sidebar-right .widget:hover {
+  box-shadow: var(--hoenheim-shadow-lg) !important;
+  transform: translateY(-2px);
+}
+
+.column .widget .widget-title {
+  background: linear-gradient(135deg, var(--hoenheim-green) 0%, var(--hoenheim-green-dark) 100%) !important;
+  color: #fff !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  padding: 0.85rem 1.25rem !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 0 !important;
+}
+
+.column .widget .widget-wrap,
+.sidebar-left .widget .widget-wrap,
+.sidebar-right .widget .widget-wrap {
+  padding: 1rem 1.25rem !important;
+}
+
+.sidebar-top-full,
+.sidebar-top {
+  background: var(--hoenheim-surface) !important;
+  border-bottom: 1px solid var(--hoenheim-border);
+}
+
+/* ---- Agenda / Events ---- */
+
+.tribe-events-list-widget-events {
+  border: 1px solid var(--hoenheim-border) !important;
+  border-radius: var(--hoenheim-radius-sm) !important;
+  overflow: hidden;
+  transition: all var(--hoenheim-transition) !important;
+  margin-bottom: 0.75rem !important;
+}
+
+li.tribe-events-list-widget-events:hover {
+  background: linear-gradient(135deg, var(--hoenheim-green) 0%, var(--hoenheim-green-dark) 100%) !important;
+  transform: translateX(4px);
+  box-shadow: var(--hoenheim-shadow);
+}
+
+li.tribe-events-list-widget-events > .fleche > a {
+  color: var(--hoenheim-green) !important;
+}
+
+/* ---- Buttons ---- */
+
+p.more > a,
+.tribe-events-read-more,
+input[type="submit"],
+button,
+.button {
+  background: linear-gradient(135deg, var(--hoenheim-green) 0%, var(--hoenheim-green-dark) 100%) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: var(--hoenheim-radius-sm) !important;
+  padding: 0.6rem 1.4rem !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  cursor: pointer;
+  transition: transform var(--hoenheim-transition), box-shadow var(--hoenheim-transition) !important;
+  display: inline-block;
+  text-decoration: none !important;
+  box-shadow: 0 2px 8px rgba(43, 171, 97, 0.3) !important;
+}
+
+p.more > a:hover,
+.tribe-events-read-more:hover,
+input[type="submit"]:hover,
+button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(43, 171, 97, 0.4) !important;
+  color: #fff !important;
+}
+
+/* ---- Slider ---- */
+
+div.pointelle-excerpt {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(8px);
+  border-radius: var(--hoenheim-radius-sm);
+  padding: 1rem !important;
+}
+
+.pointelle_slider h2 {
+  font-family: 'Fraunces', serif !important;
+  color: var(--hoenheim-blue-dark) !important;
+}
+
+.pointelle-active-lt > .pointelle_slider_thumbnail {
+  border: 3px solid var(--hoenheim-green) !important;
+  outline: none !important;
+  border-radius: var(--hoenheim-radius-sm);
+}
+
+.pointelle-slider-nav {
+  background: linear-gradient(180deg, #f8fafc, #e2e8f0) !important;
+  border-radius: var(--hoenheim-radius-sm) !important;
+}
+
+.pointelle-active-lt h2 {
+  color: #fff !important;
+}
+
+/* ---- Footer ---- */
+
+.site-info,
+#footer-navigation {
+  background: linear-gradient(135deg, var(--hoenheim-blue-dark) 0%, #0f2440 100%) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  padding: 1.5rem 0 !important;
+}
+
+#footer-navigation .horisontal-navigation li a {
+  color: rgba(255, 255, 255, 0.8) !important;
+  transition: color var(--hoenheim-transition) !important;
+}
+
+#footer-navigation .horisontal-navigation li a:hover {
+  color: var(--hoenheim-green-light) !important;
+  background: transparent !important;
+}
+
+.sidebar-footer {
+  background: #f8fafc !important;
+  border-top: 1px solid var(--hoenheim-border);
+}
+
+.sidebar-footer .widget-wrap .widget-title {
+  color: var(--hoenheim-blue-dark) !important;
+  font-family: 'Fraunces', serif !important;
+}
+
+/* ---- Tables & Content blocks ---- */
+
+table {
+  border-collapse: separate !important;
+  border-spacing: 0;
+  border-radius: var(--hoenheim-radius-sm);
+  overflow: hidden;
+  box-shadow: var(--hoenheim-shadow);
+  width: 100%;
+}
+
+table td, table th {
+  padding: 0.75rem 1rem !important;
+  border: 1px solid var(--hoenheim-border) !important;
+}
+
+.gauche, .droite, .large {
+  border: 1px solid var(--hoenheim-border) !important;
+  border-radius: var(--hoenheim-radius-sm) !important;
+  padding: 1.25rem !important;
+  background: var(--hoenheim-surface);
+  box-shadow: var(--hoenheim-shadow);
+}
+
+.sous_menu {
+  background: var(--hoenheim-bg) !important;
+  border: 1px solid var(--hoenheim-border) !important;
+  border-radius: var(--hoenheim-radius-sm) !important;
+  padding: 0.5rem !important;
+}
+
+.sous_menu a {
+  border-radius: 6px;
+  transition: background var(--hoenheim-transition);
+}
+
+.sous_menu a:hover {
+  background: var(--hoenheim-green-light) !important;
+}
+
+/* ---- Search ---- */
+
+.sidebar-header-right input[type="search"],
+.sidebar-header-right input[type="text"] {
+  border: 2px solid var(--hoenheim-border) !important;
+  border-radius: 999px !important;
+  padding: 0.5rem 1.25rem !important;
+  transition: border-color var(--hoenheim-transition), box-shadow var(--hoenheim-transition) !important;
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+.sidebar-header-right input:focus {
+  border-color: var(--hoenheim-blue-light) !important;
+  box-shadow: 0 0 0 3px rgba(74, 127, 212, 0.2) !important;
+  outline: none !important;
+}
+
+/* ---- Tribe Events Page ---- */
+
+#tribe-events-content {
+  border-radius: var(--hoenheim-radius-sm);
+}
+
+.tribe-events-list .type-tribe_events {
+  border: 1px solid var(--hoenheim-border) !important;
+  border-radius: var(--hoenheim-radius-sm) !important;
+  margin-bottom: 1rem !important;
+  padding: 1.25rem !important;
+  transition: box-shadow var(--hoenheim-transition) !important;
+  background: var(--hoenheim-surface);
+}
+
+.tribe-events-list .type-tribe_events:hover {
+  box-shadow: var(--hoenheim-shadow) !important;
+}
+
+/* ---- Entry content ---- */
+
+.entry-content p {
+  margin-bottom: 1rem;
+}
+
+.entry-content img {
+  border-radius: var(--hoenheim-radius-sm);
+  box-shadow: var(--hoenheim-shadow);
+}
+
+/* ---- Scroll to top ---- */
+
+.scroll-to-top {
+  background: var(--hoenheim-blue) !important;
+  border-radius: 50% !important;
+  box-shadow: var(--hoenheim-shadow) !important;
+  transition: transform var(--hoenheim-transition), background var(--hoenheim-transition) !important;
+}
+
+.scroll-to-top:hover {
+  background: var(--hoenheim-green) !important;
+  transform: scale(1.1);
+}
+
+/* ---- Responsive ---- */
+
+@media screen and (max-width: 960px) {
+  .site-content {
+    margin: 0.75rem !important;
+    padding: 1.25rem 1.5rem 2rem !important;
+    border-radius: var(--hoenheim-radius-sm) !important;
+  }
+
+  h1 { font-size: 1.6rem !important; }
+  h2 { font-size: 1.35rem !important; }
+}
+
+@media screen and (max-width: 679px) {
+  #top-1-navigation .horisontal-navigation li a,
+  #top-navigation .horisontal-navigation li a {
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+}
+
+/* ---- Smooth page feel ---- */
+
+* {
+  scroll-behavior: smooth;
+}
+
+img {
+  transition: opacity var(--hoenheim-transition);
+}

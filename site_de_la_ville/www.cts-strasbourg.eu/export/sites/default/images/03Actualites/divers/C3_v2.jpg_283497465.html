@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+    <html lang="en" class="noscript v-default  cts">
+                    <head>
+                            <style>html {
+                            visibility: hidden;
+                            opacity: 0;
+                        }</style>
+                            <noscript>
+                            <style>html.noscript .hide-noscript {
+                                display: none !important;
+                            }
+
+                            html {
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                            </style>
+                        </noscript>
+                        <script>
+                            document.documentElement.classList.remove("noscript");
+                            document.documentElement.classList.add("hasscript");
+                            // Show the page when DOM is loaded
+                            document.addEventListener("DOMContentLoaded", function () {
+                                const html = document.querySelector('html');
+                                html.style['visibility'] = 'visible';
+                                html.style['opacity'] = '1';
+                            });
+                        </script>
+
+                        <script src="/export/system/modules/eu.cts.module.theme/resources/js/monkeypatch.js_1271520434.js"></script>
+
+                            <script>mercury = function () {var n = function () {var n = [];return {ready: function (t) {n.push(t)},getInitFunctions: function () {return n}}}(),t = function (t) {if ("function" != typeof t) return n;n.ready(t)};return t.getInitFunctions = function () {return n.getInitFunctions()},t.ready = function (n) {this(n)},t}();var __isOnline =true,__scriptPath = "/export/system/modules/alkacon.mercury.theme/js/mercury.js"</script>
+<script async
+                                src="/export/system/modules/alkacon.mercury.theme/js/mercury.js_1675644813.js"></script>
+                            <link rel="canonical" href="https://www.cts-strasbourg.eu/fr/erreur-404/index.html">
+
+<link rel="alternate" hreflang="fr" href="https://www.cts-strasbourg.eu/fr/erreur-404/index.html">
+<link rel="alternate" hreflang="en" href="https://www.cts-strasbourg.eu/en/erreur-404/index.html">
+<link rel="alternate" hreflang="de" href="https://www.cts-strasbourg.eu/de/erreur-404/index.html">
+
+<title>CTS Erreur 404</title>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="7 days"><link rel="stylesheet" href="/export/system/modules/alkacon.mercury.theme/css/awesome-selection.min.css_565874998.css">
+<link rel="stylesheet" href="/export/system/modules/alkacon.mercury.theme/css/theme-standard.min.css_565904789.css">
+<link rel="preload" as="font" type="font/woff2" href="/export/system/modules/alkacon.mercury.theme/fonts/awesome-selection.woff2?v=my-1" crossorigin>
+<script type="text/javascript">
+                                window.jqueryValidateParams = {
+                                    labels: {
+                                        errorRequired: "Mandatory field",
+                                        errorInvalidBadgeo: "The number you entered is invalid",
+                                        errorEmail: "E-mail address must follow format example@domain.com",
+                                        errorPhone: "Please enter a valid phone number, for example 06 12 34 56 78",
+                                        errorPostalCode: "Please enter a valid postal code, for example 70000",
+                                        errorDate: "Wrong date format.",
+                                        errorDateJJMMAAAA: "Wrong date format. Please use format dd/mm/yyyy",
+                                        errorDateGoodYear: "The year must be greater than 1900",
+                                        errorIban: "The IBAN entered is not correct",
+                                        errorDateLate: "The reservation date must be within 90 days from today.",
+                                        errorNumeroBadgeo: "???cts.form.error.numeroBadgeo???",
+                                        errorEqualTo: "The email addresses entered do not match.",
+                                        errorNotEqualTo: "Values must be different",
+                                        errorNumeroPv: "Please enter a ticket number (minimum 6 digits)",
+                                        errorCBDebut: "Please enter the beginning of a valid card number (6 digits)",
+                                        errorCBFin: "Please enter a valid end of card number (4 digits)",
+
+                                        errorFileTooBig: "Your document cannot exceed the maximum size of 9MB.",
+                                        fileAttachmentText: "Drag a file here or click below to upload it.",
+
+                                        pwdRequired: "Password required",
+                                        pwdTooShort: "The password must be at least 10 characters long",
+                                        pwdNoCapital: "The password must contain at least one uppercase letter",
+                                        pwdNoLowercase: "???cts.pwdReco.pwdNoLowerCase???",
+                                        pwdNoDigit: "The password must contain at least one digit",
+                                        pwdNoSpeciallyCharacter: "???cts.pwdReco.pwdNoSpeciallyCharacter???",
+
+                                        pwdValidStrong: "Strong password",
+
+                                        pwdConfirmNotEqual: "The two passwords do not match.",
+                                        pwdConfirmEqual: "Passwords match",
+                                        pwdSameAsOld: "The new password must be different from the old one",
+
+                                        emailRequired: "The email address is required",
+                                        emailBadFormat: "The email address must be in the format exemple@domaine.fr",
+                                        emailConfirmNotEqual: "The email addresses do not match",
+
+                                        errorTooSmallYear: "Please enter a value greater than or equal to 1800",
+                                        errorTooBigYear: "Please enter a value less than or equal to 2026",
+                                    }
+                                };
+                                /**
+                                 variables communes
+                                 **/
+                                var commonVars =
+                                    {
+                                        utils: {
+                                            isEditMode: false,
+                                            isOnlineProject: true,
+                                            maxSize: 9 * 1024 * 1024
+                                        },
+                                        regex: {
+                                            // /!\ ne pas mettre les guillemets pour les regexp
+                                            date:/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/,
+                                            phone:/^([\+][0-9]{1,3}[ \.\-]{0,1})?([\(]{1}[0-9]{2,6}[\)])?([0-9 \.\-\/]{3,20})((x|ext|extension)[ ]?[0-9]{1,4})?$/,
+                                            zip:/^\d{5,6}$/
+                                        },
+                                        labels: {
+                                            passwordToggle: "Show or hide password",
+                                            errorTitle: "Error",
+                                            warningTitle: "Warning",
+                                            error: "An error has occurred. Please try again in a few minutes.",
+                                            errorAndReload: "An error has occurred. Please repeat this operation later by reloading the page.",
+                                            informationTitle: "Information",
+                                            ok: "Ok",
+                                            cancel: "Cancel",
+                                            requiredLegend: "Mandatory fields",
+                                            chooseDate: "Select this date",
+                                            photo: {
+                                                useWebcam: "Use the camera",
+                                                uploadFile: "Import a photo",
+                                                takePhoto: "Take a photo",
+                                                noWebcam: "No webcam available",
+                                                errorTitle: "Error",
+                                                missingPicture: "No photo. Please check it has been validated",
+                                                oversizedPicture: "Its size must not exceed 9 MB.",
+                                                confirmError: "OK",
+                                                tooBigImg: "File too big"
+                                            },
+                                            postalCityAutocomplete: {
+                                                noResultFor: "No results found for",
+                                            },
+                                            fileUpload: {
+                                                fileSelected: "Selected file:",
+                                            }
+                                        },
+                                        urls: {
+                                            autocompletePostalCity: "/system/modules/eu.cts.module.core/actions/autocomplete_postalCity.jsp",
+                                            photodivjsp: "/system/modules/eu.cts.module.theme/elements/photo-div.jsp",
+                                            photowebcamdivjsp: "/system/modules/eu.cts.module.theme/elements/photo-webcam-div.jsp",
+                                            photofiledivjsp: "/system/modules/eu.cts.module.theme/elements/photo-file-div.jsp",
+                                        },
+                                        locale: "en"
+                                    };
+                                var commonsLabels = {
+                                    error: {
+                                        fieldEmpty: "Empty field"
+                                    },
+                                    close: "Close"
+                                };
+                            </script>
+                            <script src="/export/system/modules/eu.cts.module.theme/resources/libs/spin.js_1146359222.js"
+                                    type="module"></script>
+<script type="module"
+                                    src="/export/system/modules/eu.cts.module.theme/resources/libs/tom-select.complete.min.js_1146359222.js"></script>
+<script src="/export/system/modules/eu.cts.module.theme/resources/libs/jquery-3.7.1.min.js_1146359222.js"></script>
+<script src="/export/system/modules/eu.cts.module.theme/resources/libs/jquery.validate.min.js_1146359222.js"></script>
+<script src="/export/system/modules/eu.cts.module.theme/resources/libs/jquery.form.js_1146359222.js"></script>
+<script src="/export/system/modules/eu.cts.module.theme/resources/libs/captchetat-js.js_2046058609.js"></script>
+<script src="/export/system/modules/eu.cts.module.theme/resources/libs/flatpickr/flatpickr.min.js_1146359222.js"></script>
+<script src="/export/system/modules/eu.cts.module.theme/resources/libs/flatpickr/fr.js_1146359222.js"></script>
+<script src="/export/system/modules/eu.cts.module.theme/resources/libs/flatpickr/confirmDate.js_1146359222.js"></script>
+<script src="/export/system/modules/eu.cts.module.theme/resources/libs/embla-carousel.umd.js_1146359222.js"></script>
+<script src="/export/system/modules/alkacon.mercury.template/resources/js/faq.js_336974845.js"></script>
+<link rel="stylesheet" href="/export/system/modules/eu.cts.module.theme/resources/css/custom.css_535022254.css">
+<script src="/export/system/modules/eu.cts.module.theme/resources/js/custom.js_1271520434.js" type="module"
+                                        defer></script>
+<link rel="apple-touch-icon" sizes="180x180"
+                                      href="">
+<link rel="icon" type="image/png" sizes="32x32"
+                                      href="/export/system/modules/alkacon.mercury.theme/img/favicon.png_642975561.png">
+<link rel="icon" type="image/png" sizes="16x16"
+                                      href="/export/system/modules/alkacon.mercury.theme/img/favicon.png_897707255.png"><title></title>
+</head>
+                    <body>
+            <a class="btn visually-hidden-focusable-fixed" id="skip-to-content" href="#main-content">Skip to content</a><main id="main-content"><div  id="mercury-page" >
+
+<div class="area-content area-wide area-full-row" ><!-- Matomo -->
+    <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function () {
+            var u = "https:\/\/ctsstrasbourg.matomo.cloud\/";
+            _paq.push(['setTrackerUrl', u + 'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.async = true;
+            g.src = 'https://cdn.matomo.cloud/ctsstrasbourg.matomo.cloud/matomo.js';
+            s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+
+    <!-- End Matomo Code -->
+    <div>
+<header id="HeaderDiv" class="header">
+
+                            <!-- Top Navigation Bar -->
+                            <div class="top-nav">
+<a href="/en/all-news/"
+                                   class="top-nav__link">News</a>
+                                <a href="/en/frequently-asked-questions/" class="top-nav__link">FAQ</a>
+                                <a href="/en/contact/contact-us/" class="top-nav__link">Contact Us</a>
+                            </div>
+
+                            <!-- Main Navigation Bar -->
+                            <div class="main-nav">
+                                <!-- Logo -->
+                                <div class="main-nav__logo">
+                                    <a href="/en/" title='CTS - Go to homepage'>
+                                        <img src="/export/sites/default/.galleries/gallerie_cts/logo_cts_header.png_1697849722.png" alt="CTS - Go to homepage"
+                                             class="main-nav__logo-img"/>
+                                    </a>
+                                </div>
+
+                                <!-- Navigation Menu - Desktop -->
+                                        <nav class="main-nav__menu" aria-label="Main navigation">
+                                            <div class="main-nav__item main-nav__item-- main-nav__item--dropdown"
+                                                                 data-dropdown="en-move"
+                                                                 tabindex="0"
+                                                                 role="button"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false"
+                                                                 aria-label="Move - Ouvrir le sous-menu">
+                                                                <img src="/export/system/modules/eu.cts.module.header/resources/images/se_deplacer.svg"
+                                                                         alt=""
+                                                                         aria-hidden="true"/>
+                                                                <span class="main-nav__text main-nav__text--">Move</span>
+                                                            </div>
+                                                        <div class="main-nav__separator"></div>
+                                                <div class="main-nav__item main-nav__item-- main-nav__item--dropdown"
+                                                                 data-dropdown="en-buy"
+                                                                 tabindex="0"
+                                                                 role="button"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false"
+                                                                 aria-label="Buy - Ouvrir le sous-menu">
+                                                                <img src="/export/system/modules/eu.cts.module.header/resources/images/acheter.svg"
+                                                                         alt=""
+                                                                         aria-hidden="true"/>
+                                                                <span class="main-nav__text main-nav__text--">Buy</span>
+                                                            </div>
+                                                        <div class="main-nav__separator"></div>
+                                                <div class="main-nav__item main-nav__item-- main-nav__item--dropdown"
+                                                                 data-dropdown="en-know-us"
+                                                                 tabindex="0"
+                                                                 role="button"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false"
+                                                                 aria-label="Know Us - Ouvrir le sous-menu">
+                                                                <img src="/export/system/modules/eu.cts.module.header/resources/images/nous_connaitre.svg"
+                                                                         alt=""
+                                                                         aria-hidden="true"/>
+                                                                <span class="main-nav__text main-nav__text--">Know Us</span>
+                                                            </div>
+                                                        <div class="main-nav__separator"></div>
+                                                <!-- Search -->
+                                            <!-- Search -->
+<div role="search">
+        <button class="main-nav__search" id="search-toggle">
+            <img class="main-nav__search-icon"
+                 src="/export/system/modules/eu.cts.module.header/resources/images/search_icon.svg"
+                 alt="Search">
+        </button>
+    </div>
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay" role="search" aria-labelledby="searchTitle"  >
+        <div class="search-overlay__content">
+            <div class="search-overlay__header">
+                <h3 class="search-overlay__title" id="searchTitle">Search ...</h3>
+                <button class="search-overlay__close" id="search-close">
+                    <img src="/export/system/modules/eu.cts.module.header/resources/images/search_overlay_close.svg" alt="Close search">
+                </button>
+            </div>
+            <div class="search-overlay__form">
+                <form id="cts-header-search-form" action="/en/search/" method="POST">
+                    <div class="search-input-wrapper">
+                        <input
+                                type="text"
+                                class="search-input"
+                                placeholder="Search ..."
+                                id="searchNavQuery"
+                                name="q" autocomplete="off"
+                                title="Search ..."
+                                aria-labelledby="searchTitle"
+                        />
+                        <button class="search-submit" type="submit"
+                                onclick="this.form.submit(); return false;" title="Search submit">
+                            <img src="/export/system/modules/eu.cts.module.header/resources/images/search_submit.svg"
+                                 alt=""
+                                 aria-hidden="true">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+                                    <!-- Right Side Controls -->
+                                <div class="main-nav__controls">
+                                    <div class="main-nav__controls-group">
+                                        <!-- Language Selector -->
+                                        <!-- Language Selector -->
+<div class="language-selector" id="lang-selector-container" tabindex="0" role="button" aria-label="Change language">
+    <select class="language-selector__select" id="language-select" onchange="location.href=this.value" aria-label="Select a language">
+        <option disabled selected style="display: none"></option>
+        <option value="/de/erreur-404/index.html">DE</option>
+                    <option value="/fr/erreur-404/index.html">FR</option>
+                    </select>
+    <span class="language-selector__text">EN</span>
+    <img class="language-selector__arrow"
+         src="/export/system/modules/eu.cts.module.header/resources/images/language_arrow.svg"
+         alt=""
+         aria-hidden="true">
+</div>
+<a href="/en/connection/" class="ma-cts-btn">
+                <img class="ma-cts-btn__icon"
+                     src="/export/system/modules/eu.cts.module.header/resources/images/ma_cts.svg"
+                     alt=""
+                     aria-hidden="true">
+                <div class="ma-cts-btn__content">
+                    <span class="ma-cts-btn__text">My CTS</span>
+                </div>
+            </a>
+        </div>
+                                </div>
+                                <!-- Mobile menu button -->
+                                <button class="mobile-menu-btn" id="mobile-menu-btn"
+                                         role="button"
+                                         aria-label="Menu"
+                                         aria-expanded="false"
+                                         aria-controls="mobile-menu"
+                                         tabindex="0">
+                                    <div class="hamburger">
+                                        <span class="hamburger__line"></span>
+                                        <span class="hamburger__line"></span>
+                                        <span class="hamburger__line"></span>
+                                    </div>
+                                </button>
+
+                            </div>
+
+                            <!-- Dropdown Menus -->
+                            <div class="dropdown-container">
+                                <div class="dropdown"
+                                             id="dropdown-en-move"
+                                             role="menu"
+                                             aria-label="Sous-menu Move">
+                                            <div class="dropdown__content dropdown__row">
+                                                <a href="/en/move/search-route/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <img src="/export/system/modules/eu.cts.module.header/resources/images/recherche_itineraire.svg"
+                                                                      alt=""
+                                                                      aria-hidden="true"/>
+                                                        <span>Route search</span>
+                                                    </a>
+
+                                                    <a href="/en/move/search-timetable/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <img src="/export/system/modules/eu.cts.module.header/resources/images/recherche_horaire.svg"
+                                                                      alt=""
+                                                                      aria-hidden="true"/>
+                                                        <span>Timetable search</span>
+                                                    </a>
+
+                                                    <a href="/en/move/infos-trafic/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <img src="/export/system/modules/eu.cts.module.header/resources/images/infotrafic.svg"
+                                                                      alt=""
+                                                                      aria-hidden="true"/>
+                                                        <span>Traffic information</span>
+                                                    </a>
+
+                                                    </div>
+                                        </div>
+                                    <div class="dropdown"
+                                             id="dropdown-en-buy"
+                                             role="menu"
+                                             aria-label="Sous-menu Buy">
+                                            <div class="dropdown__content dropdown__row">
+                                                <a href="/en/buy/our-tickets/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Transport tickets</span>
+                                                    </a>
+
+                                                    </div>
+                                        </div>
+                                    <div class="dropdown"
+                                             id="dropdown-en-know-us"
+                                             role="menu"
+                                             aria-label="Sous-menu Know Us">
+                                            <div class="dropdown__content dropdown__row">
+                                                <div class="dropdown__column">
+                                                    <a href="/en/know-us/the-essentials-of-the-cts/who-are-we-/our-story/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>The essentials of the CTS</span>
+                                                    </a>
+
+                                                    <div class="dropdown__section">
+                                                            <div class="dropdown__section--collapsible">
+
+                                                                        <div class="dropdown__subtitle-wrapper"
+                                                                             data-toggle="en-know-us-the-essentials-of-the-cts-who-are-we-"
+                                                                             tabindex="0"
+                                                                             role="button"
+                                                                             aria-expanded="false"
+                                                                             aria-label="Who are we ? - Ouvrir/Fermer">
+                                                                            <span class="dropdown__subtitle">Who are we ?</span>
+                                                                            <img class="dropdown__chevron"
+                                                                                 src="/export/system/modules/eu.cts.module.header/resources/images/dropdown_chevron.svg"
+                                                                                 alt=""
+                                                                                 aria-hidden="true">
+                                                                        </div>
+
+                                                                        <ul class="dropdown__list"
+                                                                                id="en-know-us-the-essentials-of-the-cts-who-are-we-">
+                                                                                <li>
+                                                                                    <a href="/en/know-us/the-essentials-of-the-cts/who-are-we-/our-story/"
+                                                                                       class="dropdown__sublink">Our story</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        <ul class="dropdown__list"
+                                                                                id="en-know-us-the-essentials-of-the-cts-who-are-we-">
+                                                                                <li>
+                                                                                    <a href="/en/know-us/the-essentials-of-the-cts/who-are-we-/our-key-figures/"
+                                                                                       class="dropdown__sublink">Our key figures</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/know-us/the-essentials-of-the-cts/our-commitments/">Our commitments</a>
+                                                                </div>
+                                                    </div>
+                                                    <div class="dropdown__column">
+                                                    <a href="/en/know-us/our-network/tram-and-bus/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Our network</span>
+                                                    </a>
+
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/know-us/our-network/tram-and-bus/">Tram & bus</a>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/know-us/our-network/evening-and-night-lines/">Evening and night</a>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <div class="dropdown__section--collapsible">
+
+                                                                        <div class="dropdown__subtitle-wrapper"
+                                                                             data-toggle="en-know-us-our-network-on-demand-transportation"
+                                                                             tabindex="0"
+                                                                             role="button"
+                                                                             aria-expanded="false"
+                                                                             aria-label="On-demand transportation - Ouvrir/Fermer">
+                                                                            <span class="dropdown__subtitle">On-demand transportation</span>
+                                                                            <img class="dropdown__chevron"
+                                                                                 src="/export/system/modules/eu.cts.module.header/resources/images/dropdown_chevron.svg"
+                                                                                 alt=""
+                                                                                 aria-hidden="true">
+                                                                        </div>
+
+                                                                        <ul class="dropdown__list"
+                                                                                id="en-know-us-our-network-on-demand-transportation">
+                                                                                <li>
+                                                                                    <a href="/en/know-us/our-network/on-demand-transportation/flexhop/"
+                                                                                       class="dropdown__sublink">Flex'hop</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        <ul class="dropdown__list"
+                                                                                id="en-know-us-our-network-on-demand-transportation">
+                                                                                <li>
+                                                                                    <a href="/en/know-us/our-network/on-demand-transportation/mobistras/"
+                                                                                       class="dropdown__sublink">Mobistras</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <div class="dropdown__section--collapsible">
+
+                                                                        <div class="dropdown__subtitle-wrapper"
+                                                                             data-toggle="en-know-us-our-network-parkings"
+                                                                             tabindex="0"
+                                                                             role="button"
+                                                                             aria-expanded="false"
+                                                                             aria-label="Parkings - Ouvrir/Fermer">
+                                                                            <span class="dropdown__subtitle">Parkings</span>
+                                                                            <img class="dropdown__chevron"
+                                                                                 src="/export/system/modules/eu.cts.module.header/resources/images/dropdown_chevron.svg"
+                                                                                 alt=""
+                                                                                 aria-hidden="true">
+                                                                        </div>
+
+                                                                        <ul class="dropdown__list"
+                                                                                id="en-know-us-our-network-parkings">
+                                                                                <li>
+                                                                                    <a href="/en/know-us/our-network/parkings/Park-and-ride/"
+                                                                                       class="dropdown__sublink">Park and ride</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        <ul class="dropdown__list"
+                                                                                id="en-know-us-our-network-parkings">
+                                                                                <li>
+                                                                                    <a href="/en/know-us/our-network/parkings/Bike-parking/"
+                                                                                       class="dropdown__sublink">Bike parking</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                </div>
+                                                    </div>
+                                                    <div class="dropdown__column">
+                                                    <a href="/en/know-us/press-area/press-releases/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Press area</span>
+                                                    </a>
+
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/know-us/press-area/press-releases/">Press releases</a>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/know-us/press-area/our-institutional-reports/">Our Institutional Reports</a>
+                                                                </div>
+                                                    </div>
+                                                    <div class="dropdown__column">
+                                                    <a href="/en/know-us/career-area/our-offers/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Career area</span>
+                                                    </a>
+
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/know-us/career-area/our-offers/">Our offers</a>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <div class="dropdown__section--collapsible">
+
+                                                                        <div class="dropdown__subtitle-wrapper"
+                                                                             data-toggle="en-know-us-career-area-our-professions"
+                                                                             tabindex="0"
+                                                                             role="button"
+                                                                             aria-expanded="false"
+                                                                             aria-label="Our professions - Ouvrir/Fermer">
+                                                                            <span class="dropdown__subtitle">Our professions</span>
+                                                                            <img class="dropdown__chevron"
+                                                                                 src="/export/system/modules/eu.cts.module.header/resources/images/dropdown_chevron.svg"
+                                                                                 alt=""
+                                                                                 aria-hidden="true">
+                                                                        </div>
+
+                                                                        <ul class="dropdown__list"
+                                                                                id="en-know-us-career-area-our-professions">
+                                                                                <li>
+                                                                                    <a href="/en/know-us/career-area/our-professions/exploitation-jobs/"
+                                                                                       class="dropdown__sublink">Exploitation jobs</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        <ul class="dropdown__list"
+                                                                                id="en-know-us-career-area-our-professions">
+                                                                                <li>
+                                                                                    <a href="/en/know-us/career-area/our-professions/maintenance-jobs/"
+                                                                                       class="dropdown__sublink">Maintenance jobs</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        <ul class="dropdown__list"
+                                                                                id="en-know-us-career-area-our-professions">
+                                                                                <li>
+                                                                                    <a href="/en/know-us/career-area/our-professions/support-jobs/"
+                                                                                       class="dropdown__sublink">Support jobs</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                </div>
+                                                    </div>
+                                                    <div class="dropdown__column">
+                                                    <a href="/en/know-us/public-procurement/spaser/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Public procurement</span>
+                                                    </a>
+
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/know-us/public-procurement/spaser/">SPASER</a>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/know-us/public-procurement/our-calls-for-tenders/">Our calls for tenders</a>
+                                                                </div>
+                                                    </div>
+                                                    </div>
+                                        </div>
+                                    <div class="dropdown"
+                                             id="dropdown-en-faq"
+                                             role="menu"
+                                             aria-label="Sous-menu FAQ">
+                                            <div class="dropdown__content dropdown__row">
+                                                <a href="/en/faq/faq-redirect"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>FAQ-Redirect</span>
+                                                    </a>
+
+                                                    <a href="/en/faq/details-faq/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>details-faq</span>
+                                                    </a>
+
+                                                    <a href="/en/faq/badgeo-card-and-contactless-ticket/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Badgéo card and contactless ticket</span>
+                                                    </a>
+
+                                                    <a href="/en/faq/subscriptions/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Subscriptions</span>
+                                                    </a>
+
+                                                    <a href="/en/faq/combining-several-modes-of-transport/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Combining several modes of transport</span>
+                                                    </a>
+
+                                                    <a href="/en/faq/online-agency/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Online agency</span>
+                                                    </a>
+
+                                                    <a href="/en/faq/cts-services/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>CTS services</span>
+                                                    </a>
+
+                                                    <a href="/en/faq/generalities/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Generalities</span>
+                                                    </a>
+
+                                                    <a href="/en/faq/travel-legally/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Travel legally</span>
+                                                    </a>
+
+                                                    <a href="/en/faq/professionals-and-educational-institutions/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Professionals and educational institutions</span>
+                                                    </a>
+
+                                                    <a href="/en/faq/mobile-application/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Mobile application</span>
+                                                    </a>
+
+                                                    </div>
+                                        </div>
+                                    <div class="dropdown"
+                                             id="dropdown-en-my-cts"
+                                             role="menu"
+                                             aria-label="Sous-menu My CTS">
+                                            <div class="dropdown__content dropdown__row">
+                                                <div class="dropdown__column">
+                                                    <a href="/en/my-cts/account-creation/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Account creation</span>
+                                                    </a>
+
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/my-cts/account-creation/account-created/">Account created</a>
+                                                                </div>
+                                                    </div>
+                                                    <div class="dropdown__column">
+                                                    <a href="/en/my-cts/home/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Home</span>
+                                                    </a>
+
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/my-cts/home/ter-token/">TER Token</a>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/my-cts/home/apply-free-subscription/">Apply Free Subscription</a>
+                                                                </div>
+                                                    </div>
+                                                    <div class="dropdown__column">
+                                                    <a href="/en/my-cts/my-badgeo/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>My Badgéo</span>
+                                                    </a>
+
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/my-cts/my-badgeo/badgeo-on-mobile/">Badgéo on mobile</a>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/my-cts/my-badgeo/set-up-direct-debit/">Set up a direct debit</a>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/my-cts/my-badgeo/renew-eligibility-reduced-fare/">Renew eligibility for reduced fare</a>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/my-cts/my-badgeo/order-badgeo-duplicate/">Order a duplicate Badgéo card</a>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/my-cts/my-badgeo/link-badgeo/">Link a Badgéo card to my account</a>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/my-cts/my-badgeo/order-badgeo/">Order a Badgéo card</a>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/my-cts/my-badgeo/manage-badgeo-access/">Manage my Badgéo access</a>
+                                                                </div>
+                                                    <div class="dropdown__section">
+                                                            <a class="dropdown__link"
+                                                                       href="/en/my-cts/my-badgeo/reload-badgeo/">Reload my Badgéo card</a>
+                                                                </div>
+                                                    </div>
+                                                    <a href="/en/my-cts/my-payments/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>My payments</span>
+                                                    </a>
+
+                                                    <a href="/en/my-cts/my-profile/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>My profile</span>
+                                                    </a>
+
+                                                    </div>
+                                        </div>
+                                    <div class="dropdown"
+                                             id="dropdown-en-contact"
+                                             role="menu"
+                                             aria-label="Sous-menu Contact">
+                                            <div class="dropdown__content dropdown__row">
+                                                <a href="/en/contact/contact-us/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Contact us</span>
+                                                    </a>
+
+                                                    <a href="/en/contact/contact-form/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Contact</span>
+                                                    </a>
+
+                                                    <a href="/en/contact/complaint/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>File a complaint</span>
+                                                    </a>
+
+                                                    <a href="/en/contact/terminations/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Cancel a subscription</span>
+                                                    </a>
+
+                                                    <a href="/en/contact/contest-pv/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Contesting a police report</span>
+                                                    </a>
+
+                                                    <a href="/en/contact/refunds/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Request a refund</span>
+                                                    </a>
+
+                                                    <a href="/en/contact/pro-area/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Pro area</span>
+                                                    </a>
+
+                                                    <a href="/en/contact/school-outings/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>School outings</span>
+                                                    </a>
+
+                                                    <a href="/en/contact/report-obstacles/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>Report an obstacle PRM</span>
+                                                    </a>
+
+                                                    <a href="/en/contact/lost-object/"
+                                                       class="dropdown__title"
+                                                       role="menuitem">
+                                                        <span>lost-object</span>
+                                                    </a>
+
+                                                    </div>
+                                        </div>
+                                    </div>
+                            <!-- Mobile Menu -->
+                            <nav class="mobile-menu" id="mobile-menu" aria-label="Main navigation">
+                                <div class="mobile-menu__content">
+
+                                    <div class="ma-cts-btn-and-search-wrapper ma-cts-btn-and-search-wrapper--column">
+                                        <div class="ma-cts-mobile-dropdown" id="ma-cts-mobile-dropdown-trigger">
+                                                <a href="/en/connection/" class="ma-cts-mobile-dropdown__btn">
+                                                    <img class="ma-cts-btn__icon"
+                                                         src="/export/system/modules/eu.cts.module.header/resources/images/ma_cts.svg"
+                                                         alt=""
+                                                         aria-hidden="true">
+                                                    <div class="ma-cts-btn__content">
+                                                        <span class="ma-cts-btn__text">My CTS</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        <form id="cts-header-search-form" action="/en/search/" method="POST" style="width: 100%" role="search">
+        <div class="search-input-wrapper">
+            <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search ..."
+                    id="searchNavQueryMobile"
+                    name="q" autocomplete="off"
+                    title="Search ..."
+                    aria-label="Search ..."
+            />
+            <button class="search-submit" type="submit"
+                    onclick="this.form.submit(); return false;" title="Search submit">
+                <img src="/export/system/modules/eu.cts.module.header/resources/images/search_submit_mobile.svg" alt=""
+                     aria-hidden="true">
+            </button>
+        </div>
+    </form>
+</div>
+
+                                    <div class="mobile-menu__item mobile-menu__item-- mobile-menu__item--expandable"
+                                                     data-mobile-toggle="en-move"
+                                                     tabindex="0"
+                                                     role="button"
+                                                     aria-expanded="false"
+                                                     aria-label="Move">
+                                                    <div class="mobile-menu__header">
+                                                        <img class="mobile-menu__icon"
+                                                             src="/export/system/modules/eu.cts.module.header/resources/images/se_deplacer.svg"
+                                                             alt=""
+                                                             aria-hidden="true"/>
+                                                    <span class="mobile-menu__text">Move</span>
+                                                    <img class="mobile-menu__chevron"
+                                                         src="/export/system/modules/eu.cts.module.header/resources/images/dropdown_chevron_mobile.svg"
+                                                         alt=""
+                                                         aria-hidden="true">
+                                                    </div>
+                                                    <div class="mobile-menu__submenu" id="en-move">
+
+                                                        <a href="/en/move/search-route/"
+                                                                       class="mobile-menu__sublink">Route search</a>
+                                                                <a href="/en/move/search-timetable/"
+                                                                       class="mobile-menu__sublink">Timetable search</a>
+                                                                <a href="/en/move/infos-trafic/"
+                                                                       class="mobile-menu__sublink">Traffic information</a>
+                                                                </div>
+                                                </div>
+                                            <div class="mobile-menu__item mobile-menu__item-- mobile-menu__item--expandable"
+                                                     data-mobile-toggle="en-buy"
+                                                     tabindex="0"
+                                                     role="button"
+                                                     aria-expanded="false"
+                                                     aria-label="Buy">
+                                                    <div class="mobile-menu__header">
+                                                        <img class="mobile-menu__icon"
+                                                             src="/export/system/modules/eu.cts.module.header/resources/images/acheter.svg"
+                                                             alt=""
+                                                             aria-hidden="true"/>
+                                                    <span class="mobile-menu__text">Buy</span>
+                                                    <img class="mobile-menu__chevron"
+                                                         src="/export/system/modules/eu.cts.module.header/resources/images/dropdown_chevron_mobile.svg"
+                                                         alt=""
+                                                         aria-hidden="true">
+                                                    </div>
+                                                    <div class="mobile-menu__submenu" id="en-buy">
+
+                                                        <a href="/en/buy/our-tickets/"
+                                                                       class="mobile-menu__sublink">Transport tickets</a>
+                                                                </div>
+                                                </div>
+                                            <div class="mobile-menu__item mobile-menu__item-- mobile-menu__item--expandable"
+                                                     data-mobile-toggle="en-know-us"
+                                                     tabindex="0"
+                                                     role="button"
+                                                     aria-expanded="false"
+                                                     aria-label="Know Us">
+                                                    <div class="mobile-menu__header">
+                                                        <img class="mobile-menu__icon"
+                                                             src="/export/system/modules/eu.cts.module.header/resources/images/nous_connaitre.svg"
+                                                             alt=""
+                                                             aria-hidden="true"/>
+                                                    <span class="mobile-menu__text">Know Us</span>
+                                                    <img class="mobile-menu__chevron"
+                                                         src="/export/system/modules/eu.cts.module.header/resources/images/dropdown_chevron_mobile.svg"
+                                                         alt=""
+                                                         aria-hidden="true">
+                                                    </div>
+                                                    <div class="mobile-menu__submenu" id="en-know-us">
+
+                                                        <div class="mobile-menu__section">
+                                                                        <div class="mobile-menu__section-header">
+                                                                            <span class="mobile-menu__section-title">The essentials of the CTS</span>
+                                                                        </div>
+
+                                                                        <div class="mobile-menu__subsection"
+                                                                                         data-mobile-toggle="en-know-us-the-essentials-of-the-cts-who-are-we-"
+                                                                                         tabindex="0"
+                                                                                         role="button"
+                                                                                         aria-expanded="false"
+                                                                                         aria-label="Who are we ?">
+                                                                                        <div class="mobile-menu__subsection-header">
+                                                                                            <span>Who are we ?</span>
+                                                                                            <img class="mobile-menu__mini-chevron"
+                                                                                                 src="/export/system/modules/eu.cts.module.header/resources/images/dropdown_mini_chevron.svg"
+                                                                                                 alt=""
+                                                                                                 aria-hidden="true">
+                                                                                        </div>
+
+                                                                                        <div class="mobile-menu__sublinks"
+                                                                                             id="en-know-us-the-essentials-of-the-cts-who-are-we-">
+                                                                                            <a href="/en/know-us/the-essentials-of-the-cts/who-are-we-/our-story/"
+                                                                                                   class="mobile-menu__sublink">Our story</a>
+                                                                                            <a href="/en/know-us/the-essentials-of-the-cts/who-are-we-/our-key-figures/"
+                                                                                                   class="mobile-menu__sublink">Our key figures</a>
+                                                                                            </div>
+                                                                                    </div>
+                                                                                <a href="/en/know-us/the-essentials-of-the-cts/our-commitments/"
+                                                                                       class="mobile-menu__sublink">Our commitments</a>
+                                                                                </div>
+                                                                <div class="mobile-menu__section">
+                                                                        <div class="mobile-menu__section-header">
+                                                                            <span class="mobile-menu__section-title">Our network</span>
+                                                                        </div>
+
+                                                                        <a href="/en/know-us/our-network/tram-and-bus/"
+                                                                                       class="mobile-menu__sublink">Tram & bus</a>
+                                                                                <a href="/en/know-us/our-network/evening-and-night-lines/"
+                                                                                       class="mobile-menu__sublink">Evening and night</a>
+                                                                                <div class="mobile-menu__subsection"
+                                                                                         data-mobile-toggle="en-know-us-our-network-on-demand-transportation"
+                                                                                         tabindex="0"
+                                                                                         role="button"
+                                                                                         aria-expanded="false"
+                                                                                         aria-label="On-demand transportation">
+                                                                                        <div class="mobile-menu__subsection-header">
+                                                                                            <span>On-demand transportation</span>
+                                                                                            <img class="mobile-menu__mini-chevron"
+                                                                                                 src="/export/system/modules/eu.cts.module.header/resources/images/dropdown_mini_chevron.svg"
+                                                                                                 alt=""
+                                                                                                 aria-hidden="true">
+                                                                                        </div>
+
+                                                                                        <div class="mobile-menu__sublinks"
+                                                                                             id="en-know-us-our-network-on-demand-transportation">
+                                                                                            <a href="/en/know-us/our-network/on-demand-transportation/flexhop/"
+                                                                                                   class="mobile-menu__sublink">Flex'hop</a>
+                                                                                            <a href="/en/know-us/our-network/on-demand-transportation/mobistras/"
+                                                                                                   class="mobile-menu__sublink">Mobistras</a>
+                                                                                            </div>
+                                                                                    </div>
+                                                                                <div class="mobile-menu__subsection"
+                                                                                         data-mobile-toggle="en-know-us-our-network-parkings"
+                                                                                         tabindex="0"
+                                                                                         role="button"
+                                                                                         aria-expanded="false"
+                                                                                         aria-label="Parkings">
+                                                                                        <div class="mobile-menu__subsection-header">
+                                                                                            <span>Parkings</span>
+                                                                                            <img class="mobile-menu__mini-chevron"
+                                                                                                 src="/export/system/modules/eu.cts.module.header/resources/images/dropdown_mini_chevron.svg"
+                                                                                                 alt=""
+                                                                                                 aria-hidden="true">
+                                                                                        </div>
+
+                                                                                        <div class="mobile-menu__sublinks"
+                                                                                             id="en-know-us-our-network-parkings">
+                                                                                            <a href="/en/know-us/our-network/parkings/Park-and-ride/"
+                                                                                                   class="mobile-menu__sublink">Park and ride</a>
+                                                                                            <a href="/en/know-us/our-network/parkings/Bike-parking/"
+                                                                                                   class="mobile-menu__sublink">Bike parking</a>
+                                                                                            </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                <div class="mobile-menu__section">
+                                                                        <div class="mobile-menu__section-header">
+                                                                            <span class="mobile-menu__section-title">Press area</span>
+                                                                        </div>
+
+                                                                        <a href="/en/know-us/press-area/press-releases/"
+                                                                                       class="mobile-menu__sublink">Press releases</a>
+                                                                                <a href="/en/know-us/press-area/our-institutional-reports/"
+                                                                                       class="mobile-menu__sublink">Our Institutional Reports</a>
+                                                                                </div>
+                                                                <div class="mobile-menu__section">
+                                                                        <div class="mobile-menu__section-header">
+                                                                            <span class="mobile-menu__section-title">Career area</span>
+                                                                        </div>
+
+                                                                        <a href="/en/know-us/career-area/our-offers/"
+                                                                                       class="mobile-menu__sublink">Our offers</a>
+                                                                                <div class="mobile-menu__subsection"
+                                                                                         data-mobile-toggle="en-know-us-career-area-our-professions"
+                                                                                         tabindex="0"
+                                                                                         role="button"
+                                                                                         aria-expanded="false"
+                                                                                         aria-label="Our professions">
+                                                                                        <div class="mobile-menu__subsection-header">
+                                                                                            <span>Our professions</span>
+                                                                                            <img class="mobile-menu__mini-chevron"
+                                                                                                 src="/export/system/modules/eu.cts.module.header/resources/images/dropdown_mini_chevron.svg"
+                                                                                                 alt=""
+                                                                                                 aria-hidden="true">
+                                                                                        </div>
+
+                                                                                        <div class="mobile-menu__sublinks"
+                                                                                             id="en-know-us-career-area-our-professions">
+                                                                                            <a href="/en/know-us/career-area/our-professions/exploitation-jobs/"
+                                                                                                   class="mobile-menu__sublink">Exploitation jobs</a>
+                                                                                            <a href="/en/know-us/career-area/our-professions/maintenance-jobs/"
+                                                                                                   class="mobile-menu__sublink">Maintenance jobs</a>
+                                                                                            <a href="/en/know-us/career-area/our-professions/support-jobs/"
+                                                                                                   class="mobile-menu__sublink">Support jobs</a>
+                                                                                            </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                <div class="mobile-menu__section">
+                                                                        <div class="mobile-menu__section-header">
+                                                                            <span class="mobile-menu__section-title">Public procurement</span>
+                                                                        </div>
+
+                                                                        <a href="/en/know-us/public-procurement/spaser/"
+                                                                                       class="mobile-menu__sublink">SPASER</a>
+                                                                                <a href="/en/know-us/public-procurement/our-calls-for-tenders/"
+                                                                                       class="mobile-menu__sublink">Our calls for tenders</a>
+                                                                                </div>
+                                                                </div>
+                                                </div>
+                                            <div class="mobile-menu__item mobile-menu__item-- mobile-menu__item--expandable"
+                                                     data-mobile-toggle="en-faq"
+                                                     tabindex="0"
+                                                     role="button"
+                                                     aria-expanded="false"
+                                                     aria-label="FAQ">
+                                                    <div class="mobile-menu__header">
+                                                        <span class="mobile-menu__text">FAQ</span>
+                                                    <img class="mobile-menu__chevron"
+                                                         src="/export/system/modules/eu.cts.module.header/resources/images/dropdown_chevron_mobile.svg"
+                                                         alt=""
+                                                         aria-hidden="true">
+                                                    </div>
+                                                    <div class="mobile-menu__submenu" id="en-faq">
+
+                                                        <a href="/en/faq/faq-redirect"
+                                                                       class="mobile-menu__sublink">FAQ-Redirect</a>
+                                                                <a href="/en/faq/details-faq/"
+                                                                       class="mobile-menu__sublink">details-faq</a>
+                                                                <a href="/en/faq/badgeo-card-and-contactless-ticket/"
+                                                                       class="mobile-menu__sublink">Badgéo card and contactless ticket</a>
+                                                                <a href="/en/faq/subscriptions/"
+                                                                       class="mobile-menu__sublink">Subscriptions</a>
+                                                                <a href="/en/faq/combining-several-modes-of-transport/"
+                                                                       class="mobile-menu__sublink">Combining several modes of transport</a>
+                                                                <a href="/en/faq/online-agency/"
+                                                                       class="mobile-menu__sublink">Online agency</a>
+                                                                <a href="/en/faq/cts-services/"
+                                                                       class="mobile-menu__sublink">CTS services</a>
+                                                                <a href="/en/faq/generalities/"
+                                                                       class="mobile-menu__sublink">Generalities</a>
+                                                                <a href="/en/faq/travel-legally/"
+                                                                       class="mobile-menu__sublink">Travel legally</a>
+                                                                <a href="/en/faq/professionals-and-educational-institutions/"
+                                                                       class="mobile-menu__sublink">Professionals and educational institutions</a>
+                                                                <a href="/en/faq/mobile-application/"
+                                                                       class="mobile-menu__sublink">Mobile application</a>
+                                                                </div>
+                                                </div>
+                                            <div class="mobile-menu__item mobile-menu__item-- mobile-menu__item--expandable"
+                                                     data-mobile-toggle="en-my-cts"
+                                                     tabindex="0"
+                                                     role="button"
+                                                     aria-expanded="false"
+                                                     aria-label="My CTS">
+                                                    <div class="mobile-menu__header">
+                                                        <span class="mobile-menu__text">My CTS</span>
+                                                    <img class="mobile-menu__chevron"
+                                                         src="/export/system/modules/eu.cts.module.header/resources/images/dropdown_chevron_mobile.svg"
+                                                         alt=""
+                                                         aria-hidden="true">
+                                                    </div>
+                                                    <div class="mobile-menu__submenu" id="en-my-cts">
+
+                                                        <div class="mobile-menu__section">
+                                                                        <div class="mobile-menu__section-header">
+                                                                            <span class="mobile-menu__section-title">Account creation</span>
+                                                                        </div>
+
+                                                                        <a href="/en/my-cts/account-creation/account-created/"
+                                                                                       class="mobile-menu__sublink">Account created</a>
+                                                                                </div>
+                                                                <div class="mobile-menu__section">
+                                                                        <div class="mobile-menu__section-header">
+                                                                            <span class="mobile-menu__section-title">Home</span>
+                                                                        </div>
+
+                                                                        <a href="/en/my-cts/home/ter-token/"
+                                                                                       class="mobile-menu__sublink">TER Token</a>
+                                                                                <a href="/en/my-cts/home/apply-free-subscription/"
+                                                                                       class="mobile-menu__sublink">Apply Free Subscription</a>
+                                                                                </div>
+                                                                <div class="mobile-menu__section">
+                                                                        <div class="mobile-menu__section-header">
+                                                                            <span class="mobile-menu__section-title">My Badgéo</span>
+                                                                        </div>
+
+                                                                        <a href="/en/my-cts/my-badgeo/badgeo-on-mobile/"
+                                                                                       class="mobile-menu__sublink">Badgéo on mobile</a>
+                                                                                <a href="/en/my-cts/my-badgeo/set-up-direct-debit/"
+                                                                                       class="mobile-menu__sublink">Set up a direct debit</a>
+                                                                                <a href="/en/my-cts/my-badgeo/renew-eligibility-reduced-fare/"
+                                                                                       class="mobile-menu__sublink">Renew eligibility for reduced fare</a>
+                                                                                <a href="/en/my-cts/my-badgeo/order-badgeo-duplicate/"
+                                                                                       class="mobile-menu__sublink">Order a duplicate Badgéo card</a>
+                                                                                <a href="/en/my-cts/my-badgeo/link-badgeo/"
+                                                                                       class="mobile-menu__sublink">Link a Badgéo card to my account</a>
+                                                                                <a href="/en/my-cts/my-badgeo/order-badgeo/"
+                                                                                       class="mobile-menu__sublink">Order a Badgéo card</a>
+                                                                                <a href="/en/my-cts/my-badgeo/manage-badgeo-access/"
+                                                                                       class="mobile-menu__sublink">Manage my Badgéo access</a>
+                                                                                <a href="/en/my-cts/my-badgeo/reload-badgeo/"
+                                                                                       class="mobile-menu__sublink">Reload my Badgéo card</a>
+                                                                                </div>
+                                                                <a href="/en/my-cts/my-payments/"
+                                                                       class="mobile-menu__sublink">My payments</a>
+                                                                <a href="/en/my-cts/my-profile/"
+                                                                       class="mobile-menu__sublink">My profile</a>
+                                                                </div>
+                                                </div>
+                                            <div class="mobile-menu__item mobile-menu__item-- mobile-menu__item--expandable"
+                                                     data-mobile-toggle="en-contact"
+                                                     tabindex="0"
+                                                     role="button"
+                                                     aria-expanded="false"
+                                                     aria-label="Contact">
+                                                    <div class="mobile-menu__header">
+                                                        <span class="mobile-menu__text">Contact</span>
+                                                    <img class="mobile-menu__chevron"
+                                                         src="/export/system/modules/eu.cts.module.header/resources/images/dropdown_chevron_mobile.svg"
+                                                         alt=""
+                                                         aria-hidden="true">
+                                                    </div>
+                                                    <div class="mobile-menu__submenu" id="en-contact">
+
+                                                        <a href="/en/contact/contact-us/"
+                                                                       class="mobile-menu__sublink">Contact us</a>
+                                                                <a href="/en/contact/contact-form/"
+                                                                       class="mobile-menu__sublink">Contact</a>
+                                                                <a href="/en/contact/complaint/"
+                                                                       class="mobile-menu__sublink">File a complaint</a>
+                                                                <a href="/en/contact/terminations/"
+                                                                       class="mobile-menu__sublink">Cancel a subscription</a>
+                                                                <a href="/en/contact/contest-pv/"
+                                                                       class="mobile-menu__sublink">Contesting a police report</a>
+                                                                <a href="/en/contact/refunds/"
+                                                                       class="mobile-menu__sublink">Request a refund</a>
+                                                                <a href="/en/contact/pro-area/"
+                                                                       class="mobile-menu__sublink">Pro area</a>
+                                                                <a href="/en/contact/school-outings/"
+                                                                       class="mobile-menu__sublink">School outings</a>
+                                                                <a href="/en/contact/report-obstacles/"
+                                                                       class="mobile-menu__sublink">Report an obstacle PRM</a>
+                                                                <a href="/en/contact/lost-object/"
+                                                                       class="mobile-menu__sublink">lost-object</a>
+                                                                </div>
+                                                </div>
+                                            </div>
+
+                                <div class="top-nav-mobile">
+                                    <a href="/en/all-news/" class="top-nav__link">News</a>
+                                    <a href="/en/frequently-asked-questions/" class="top-nav__link">FAQ</a>
+                                    <a href="/en/contact/contact-us/" class="top-nav__link">Contact Us</a>
+                                </div>
+
+                            </nav>
+                        </header>
+
+                        <script language="JavaScript">
+                            window.headerparams = {
+                                labels: {
+                                    showless: "See less",
+                                    showmore: "See more",
+                                    learnmore: "Learn more"
+                                }
+                            };
+                        </script>
+                        <script src="/export/system/modules/eu.cts.module.theme/resources/js/header/header.js_1271520434.js"></script>
+                        <script src="/export/system/modules/eu.cts.module.theme/resources/js/header/alerte-traffic-custom.js_1271520434.js"></script>
+                        <script src="/export/system/modules/eu.cts.module.theme/resources/js/header/language-selector.js_1271520434.js"></script>
+
+                        </div>
+            </div>
+
+
+<div class="area-content area-wide area-full-row" ></div>
+
+<main class="area-content area-one-row">
+<div class="container area-wide" >
+<div class="row justify-content-lg-center error-404">
+<div class="col-lg-12 col-xl-12" ><script language="JavaScript"
+            src="/system/modules/eu.cts.module.contribution_cts/resources/js/image-et-texte.js"></script>
+
+    <div class="element type-section content-card alert-info-card piece float right lay-9 phh pih phb phl pil phv p-dm p-md-4 p-dd">
+<div class="visual rs_skip ori-sq"><div class="image-src-box presized use-ratio effect-box">
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/export/sites/default/.galleries/Ressources-graphiques-CTS/error-404.svg" width="329" height="329" class="animated lazyload hide-noscript" alt="error-404" style="aspect-ratio: 329 / 329;">
+<noscript><img src="/export/sites/default/.galleries/Ressources-graphiques-CTS/error-404.svg" width="329" height="329" class="animated" alt="error-404"></noscript></div>
+</div><div class="body default"><div class="heading"><h2 class="piece-heading" tabindex="0"><span >Page non trouvée</span></h2>
+</div><div class="text"><p>La page que vous cherchiez n'existe plus ou a été déplacée</p></div>
+<div class="link"><a href="/en/home/" class="btn piece-btn">Retour à l&#039;accueil</a></div></div>
+</div>
+</div></div>
+</div>
+</main>
+
+
+<div class="area-content area-wide area-full-row footer-container" >
+<div class="element type-flexible pivot">
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<footer class="footer">
+    <section class="footer-info">
+        <div class="footer-info-content">
+            <img
+                    src="/.galleries/Ressources-graphiques-CTS/Logo_Compagnie_des_transports_strasbourgeois.svg.png_243899965.png"
+                    alt="Logo CTS"
+                    class="footer-logo"
+            />
+            <p class="footer-description">
+                operator of the public transportation network of
+            </p>
+            <img
+                    src="/.galleries/CTS-Icones/logo-ems.jpg"
+                    alt="Logo EMS"
+                    class="footer-logo-ems"
+            />
+        </div>
+        <p class="footer-copyright">© 2026 - CTS</p>
+    </section>
+
+    <nav class="footer-nav">
+        <a href="/en/contact" class="footer-nav-link">Contact</a>
+        <a href="/en/open-data" class="footer-nav-link">Open Data</a>
+        <a href="/en/legal-notices" class="footer-nav-link">Legal Notices</a>
+        <a href="/en/gcsu" class="footer-nav-link">GCSU</a>
+        <a href="/en/cookies-policy/" class="footer-nav-link">Cookies Policy</a>
+        <a href="/en/sitemap" class="footer-nav-link">Sitemap</a>
+    </nav>
+
+    <div class="footer-cards">
+        <section class="app-card">
+            <img
+                    src="/.galleries/Ressources-graphiques-CTS/image-application-cts.png"
+                    alt="Application mobile CTS"
+                    class="app-image"
+            />
+            <div class="app-content">
+                <div class="app-text">
+                    <h2 class="app-title">Download our app!</h2>
+                    <p class="app-description">
+                    <span
+                    >Plan your journeys, get information, buy and validate your tickets,</span
+                    >
+                        <br/>
+                        <span class="app-description-bold">directly from your smartphone!</span>
+                        <span>!</span>
+                    </p>
+                </div>
+                <div class="app-stores">
+                    <a href="https://play.google.com/store/apps/details?id=fr.cts.strasbourg.ugo&hl=fr" target="_blank"
+                       class="store-link">
+                        <img
+                                src="/.galleries/Ressources-graphiques-CTS/disponible-google-play.png"
+                                alt="Télécharger sur Google Play"
+                                class="store-badge"
+                        />
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/cts-transports-strasbourg/id1241895758" target="_blank"
+                       class="store-link">
+                        <img
+                                src="/.galleries/Ressources-graphiques-CTS/disponible-apple-store.png"
+                                alt="Télécharger sur l'App Store"
+                                class="store-badge"
+                        />
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-card">
+            <img
+                    src="/.galleries/Ressources-graphiques-CTS/bus.png"
+                    alt="Icône transport"
+                    class="social-icon-image"
+            />
+            <h3 class="social-title">News, traffic, new features...</h3>
+            <p class="social-description">
+                <span>We're on</span>
+                <br/>
+                <span class="social-description-bold">social media!</span>
+                <span>!</span>
+            </p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/CtsStrasbourg/?locale=fr_FR" target="_blank" class="social-link"
+                   aria-label="Follow us on Facebook">
+                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="33" height="33" rx="16.5" fill="#353A3D"/>
+                        <path d="M14.4199 25V17.0231H12.25V14.151H14.4199V11.6979C14.4199 9.77024 15.7016 8 18.655 8C19.8508 8 20.735 8.11144 20.735 8.11144L20.6653 10.7935C20.6653 10.7935 19.7636 10.7849 18.7795 10.7849C17.7145 10.7849 17.5438 11.262 17.5438 12.0539V14.151H20.75L20.6105 17.0231H17.5438V25H14.4199Z" fill="white"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/ctsstrasbourg" target="_blank" class="social-link"
+                   aria-label="Follow us on Instagram">
+                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="33" height="33" rx="16.5" fill="#353A3D"/>
+                        <path d="M16.5016 12.9674C14.5152 12.9674 12.9129 14.5446 12.9129 16.4999C12.9129 18.4553 14.5152 20.0325 16.5016 20.0325C18.488 20.0325 20.0902 18.4553 20.0902 16.4999C20.0902 14.5446 18.488 12.9674 16.5016 12.9674ZM16.5016 18.7965C15.2179 18.7965 14.1685 17.7666 14.1685 16.4999C14.1685 15.2333 15.2148 14.2033 16.5016 14.2033C17.7883 14.2033 18.8346 15.2333 18.8346 16.4999C18.8346 17.7666 17.7852 18.7965 16.5016 18.7965ZM21.074 12.8229C21.074 13.281 20.6992 13.6468 20.237 13.6468C19.7716 13.6468 19.3999 13.2779 19.3999 12.8229C19.3999 12.3679 19.7747 11.9989 20.237 11.9989C20.6992 11.9989 21.074 12.3679 21.074 12.8229ZM23.4508 13.6591C23.3977 12.5554 23.1416 11.5777 22.3202 10.7722C21.5019 9.96671 20.5087 9.7146 19.3875 9.65926C18.2318 9.5947 14.7682 9.5947 13.6125 9.65926C12.4944 9.71153 11.5012 9.96363 10.6798 10.7691C9.85839 11.5746 9.60541 12.5523 9.54919 13.6561C9.4836 14.7936 9.4836 18.2032 9.54919 19.3407C9.60229 20.4445 9.85839 21.4221 10.6798 22.2276C11.5012 23.0332 12.4913 23.2853 13.6125 23.3406C14.7682 23.4052 18.2318 23.4052 19.3875 23.3406C20.5087 23.2883 21.5019 23.0362 22.3202 22.2276C23.1385 21.4221 23.3946 20.4445 23.4508 19.3407C23.5164 18.2032 23.5164 14.7967 23.4508 13.6591ZM21.9579 20.5613C21.7143 21.1639 21.2427 21.6281 20.6274 21.871C19.706 22.2307 17.5197 22.1477 16.5016 22.1477C15.4834 22.1477 13.294 22.2276 12.3757 21.871C11.7636 21.6312 11.292 21.167 11.0452 20.5613C10.6798 19.6543 10.7641 17.5022 10.7641 16.4999C10.7641 15.4977 10.6829 13.3425 11.0452 12.4386C11.2888 11.836 11.7605 11.3717 12.3757 11.1289C13.2971 10.7691 15.4834 10.8522 16.5016 10.8522C17.5197 10.8522 19.7091 10.7722 20.6274 11.1289C21.2395 11.3687 21.7112 11.8329 21.9579 12.4386C22.3233 13.3455 22.239 15.4977 22.239 16.4999C22.239 17.5022 22.3233 19.6574 21.9579 20.5613Z" fill="white"/>
+                    </svg>
+                </a>
+                <a href="https://fr.linkedin.com/company/compagnie-des-transports-strasbourgeois" target="_blank"
+                   class="social-link"
+                   aria-label="Follow us on Linkedin">
+                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="33" height="33" rx="16.5" fill="#353A3D"/>
+                        <path d="M12.6781 23.0615V14.2074H9.67706V23.0615H12.6781ZM11.178 12.9978C12.2245 12.9978 12.8759 12.3179 12.8759 11.4683C12.8564 10.5995 12.2245 9.93848 11.1978 9.93848C10.1713 9.93848 9.5 10.5995 9.5 11.4683C9.5 12.318 10.1512 12.9978 11.1584 12.9978H11.178ZM14.3392 23.0615H17.3402V18.1169C17.3402 17.8523 17.3597 17.5879 17.439 17.3988C17.6559 16.8701 18.1497 16.3225 18.9787 16.3225C20.0647 16.3225 20.4991 17.1344 20.4991 18.3247V23.0614H23.5V17.9846C23.5 15.2649 22.0194 13.9995 20.0449 13.9995C18.426 13.9995 17.7152 14.8869 17.3203 15.4913H17.3403V14.2072H14.3392C14.3786 15.038 14.3392 23.0615 14.3392 23.0615Z" fill="white"/>
+                    </svg>
+                </a>
+
+            </div>
+        </section>
+    </div>
+</footer>
+</body>
+</html></div>
+</div>
+</div>
+</main>
+<div id="template-info" data-info='{"iconConfig":"L2V4cG9ydC9zeXN0ZW0vbW9kdWxlcy9hbGthY29uLm1lcmN1cnkudGhlbWUvaWNvbnMvZmEvYXQuc3Zn","fullIcons":"L2V4cG9ydC9zeXN0ZW0vbW9kdWxlcy9hbGthY29uLm1lcmN1cnkudGhlbWUvY3NzL2F3ZXNvbWUtZnVsbC5taW4uY3NzXzU2NTg3NDk5OC5jc3M=","editMode":"false","project":"online","context":"/","locale":"en"}'>
+<div id="template-grid-info"></div></div>
+<div id="myTopControl" tabindex="0"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const btn = document.getElementById("myTopControl");
+
+        if (!btn) return;
+
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        });
+
+        btn.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    });
+</script>
+<div id="privacy-policy-placeholder"></div><div id="privacy-policy-banner" class="pp-banner" data-banner='{"root":"L3NpdGVzL2RlZmF1bHQ=","page":"L2ZyL2VycmV1ci00MDQvaW5kZXguaHRtbA==","policy":"Ly5jb250ZW50L3ByaXZhY3ktcG9saWN5LnhtbA=="}'></div>
+<noscript><div id="privacy-policy-banner-noscript" class="pp-banner"><div class=banner><div class="container"><div class="message">JavaSript is disabled!</div></div></div></div></noscript>
+<div class="ctsmodal micromodal-slide" id="ctsmodal-1" aria-hidden="true">
+                                    <div class="ctsmodal__overlay" tabindex="-1" data-micromodal-close>
+                                        <div class="ctsmodal__container" role="dialog" aria-modal="true"
+                                             aria-labelledby="ctsmodal-1-title">
+                                            <header class="ctsmodal__header">
+                                                <h2 class="ctsmodal__title" id="ctsmodal-1-title">
+                                                </h2>
+                                                <button class="ctsmodal__close" aria-label="Close modal"
+                                                        data-micromodal-close></button>
+                                            </header>
+                                            <div class="ctsmodal__content" id="ctsmodal-1-content">
+                                            </div>
+                                            <footer class="ctsmodal__footer" id="ctsmodal-1-footer">
+                                                    </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                            </body>
+                </html>

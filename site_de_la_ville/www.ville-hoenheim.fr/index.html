@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ville de Hoenheim — Accueil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue-dark: #1a3560;
+      --blue: #2d5a9e;
+      --blue-light: #4a7fd4;
+      --green: #2bab61;
+      --green-dark: #1e8a4a;
+      --bg: #f0f4f8;
+      --surface: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow: 0 4px 24px rgba(26, 53, 96, 0.08);
+      --shadow-lg: 0 12px 40px rgba(26, 53, 96, 0.14);
+      --radius: 16px;
+    }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: linear-gradient(160deg, #dce6f0 0%, #f5f7fa 50%, #e8eef5 100%);
+      min-height: 100vh;
+      color: var(--text);
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 60%, var(--blue-light) 100%);
+      padding: 1.5rem 2rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      border: 3px solid rgba(255,255,255,0.3);
+    }
+
+    .header-text h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 2.2rem;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .header-text p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.05rem;
+      margin-top: 0.35rem;
+    }
+
+    /* Hero */
+    .hero {
+      max-width: 1200px;
+      margin: -2rem auto 0;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      padding: 2.5rem;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .hero-card h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.75rem;
+      color: var(--blue-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-card p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      color: #fff;
+      text-decoration: none;
+      padding: 0.85rem 2rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 4px 16px rgba(43,171,97,0.35);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(43,171,97,0.45);
+    }
+
+    /* Quick links grid */
+    main {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 2rem 4rem;
+    }
+
+    .section-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.5rem;
+      color: var(--blue-dark);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid var(--green);
+      display: inline-block;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--blue-light);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .card-icon.blue { background: #e8f0fe; }
+    .card-icon.green { background: #e8f7ef; }
+    .card-icon.purple { background: #f0ebff; }
+    .card-icon.orange { background: #fff3e8; }
+    .card-icon.teal { background: #e6f7f5; }
+    .card-icon.red { background: #fde8e8; }
+
+    .card h3 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.15rem;
+      color: var(--blue-dark);
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .card-arrow {
+      margin-top: auto;
+      color: var(--green);
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    footer {
+      background: linear-gradient(135deg, var(--blue-dark), #0f2440);
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      .header-inner { flex-direction: column; text-align: center; }
+      .header-text h1 { font-size: 1.6rem; }
+      .hero-card { padding: 1.75rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <img src="wp-content/uploads/2015/07/logoHoenheim1.jpg" alt="Logo Ville de Hoenheim" class="logo">
+      <div class="header-text">
+        <h1>Ville de Hoenheim</h1>
+        <p>Bienvenue sur le site officiel de votre commune</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-card">
+      <h2>Votre ville, vos services</h2>
+      <p>Découvrez l'agenda des événements, vos démarches administratives, les actualités et tous les services municipaux de Hoenheim.</p>
+      <a href="events/liste/index.html" class="hero-cta">Voir l'agenda des événements →</a>
+    </div>
+  </div>
+
+  <main>
+    <h2 class="section-title">Accès rapides</h2>
+    <div class="grid">
+      <a href="events/liste/index.html" class="card">
+        <div class="card-icon blue">📅</div>
+        <h3>Agenda</h3>
+        <p>Concerts, expositions, marchés, animations culturelles et sportives.</p>
+        <span class="card-arrow">Consulter →</span>
+      </a>
+      <a href="vos-demarches/index.html" class="card">
+        <div class="card-icon green">📋</div>
+        <h3>Vos démarches</h3>
+        <p>État civil, urbanisme, scolarité, jeunesse et services municipaux.</p>
+        <span class="card-arrow">Accéder →</span>
+      </a>
+      <a href="nous-contacter/index.html" class="card">
+        <div class="card-icon purple">✉️</div>
+        <h3>Nous contacter</h3>
+        <p>Coordonnées de la mairie, horaires d'ouverture et formulaire de contact.</p>
+        <span class="card-arrow">Contacter →</span>
+      </a>
+      <a href="plan-du-site/index.html" class="card">
+        <div class="card-icon orange">🗺️</div>
+        <h3>Plan du site</h3>
+        <p>Retrouvez l'ensemble des pages et rubriques du site municipal.</p>
+        <span class="card-arrow">Explorer →</span>
+      </a>
+      <a href="category/votre-ville/index.html" class="card">
+        <div class="card-icon teal">🏛️</div>
+        <h3>Votre ville</h3>
+        <p>Conseil municipal, attractivité, environnement et vie locale.</p>
+        <span class="card-arrow">Découvrir →</span>
+      </a>
+      <a href="location-de-salles/index.html" class="card">
+        <div class="card-icon red">🏠</div>
+        <h3>Location de salles</h3>
+        <p>Réservez une salle municipale pour vos événements et réunions.</p>
+        <span class="card-arrow">Réserver →</span>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Ville de Hoenheim — Site consultable hors ligne</p>
+    <p style="margin-top:0.5rem"><a href="events/index.html">Version complète du site</a></p>
+  </footer>
+
+</body>
+</html>
